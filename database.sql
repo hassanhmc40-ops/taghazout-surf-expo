@@ -49,3 +49,18 @@ INSERT INTO users (name, email, password, role) VALUES
 ('Surfer Carlos',  'carlos@surf.ma',  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'surfer');
 -- This hashed password = password123 for all test accounts
 
+INSERT INTO students (user_id, country, level) VALUES
+(2, 'Morocco', 'Beginner'),
+(3, 'Morocco', 'Intermediate'),
+(4, 'Spain',   'Advanced');
+
+INSERT INTO lessons (title, coach, scheduled_at) VALUES
+('Morning Beginners',      'Coach Hassan', '2026-04-05 08:00:00'),
+('Afternoon Intermediate', 'Coach Sara',   '2026-04-05 14:00:00'),
+('Sunset Advanced',        'Coach Hassan', '2026-04-06 17:00:00');
+
+INSERT INTO enrollments (student_id, lesson_id, payment_status) VALUES
+(1, 1, 'Paid'),
+(2, 2, 'Pending'),
+(3, 3, 'Paid'),
+(1, 2, 'Pending');
