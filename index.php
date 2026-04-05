@@ -15,7 +15,7 @@ $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // Remove project subfolder from URL if running in localhost subfolder
 // Change 'Surfing school challenge' to your actual folder name
-$basePath = '/Surfing school challenge';
+$basePath = '/Surfing_schoo_challenge';
 $url      = str_replace($basePath, '', $url);
 
 // Remove trailing slash except for root

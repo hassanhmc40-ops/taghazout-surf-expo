@@ -68,7 +68,7 @@
 
     </form>
 
-    <p>Already have an account? <a href="/login">Login here</a></p>
+    <p>Already have an account? <a href="/Surfing_schoo_challenge/login">Login here</a></p>
 </div>
 
 <?php require_once __DIR__ . '/../layout/footer.php'; ?>

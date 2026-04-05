@@ -1,8 +1,8 @@
 <?php
-// Start session at the top so every page has access to $_SESSION
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+$base = '/Surfing_schoo_challenge';
 ?>
 
 <!DOCTYPE html>
@@ -11,28 +11,30 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taghazout Surf Expo</title>
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="http://<?= $_SERVER['HTTP_HOST'] . $base ?>/public/css/style.css">
 </head>
 <body>
 
 <nav>
-    <a href="/">Taghazout Surf Expo</a>
+    <a href="<?= $base ?>/">🏄 Taghazout Surf Expo</a>
 
-    <?php if (isset($_SESSION['user_id'])): ?>
+    <div class="nav-links">
+        <?php if (isset($_SESSION['user_id'])): ?>
 
-        <span>Welcome, <?= htmlspecialchars($_SESSION['name']) ?></span>
+            <span>Welcome, <?= htmlspecialchars($_SESSION['name']) ?></span>
 
-        <?php if ($_SESSION['role'] === 'manager'): ?>
-            <a href="/students">Students</a>
-            <a href="/lessons">Lessons</a>
+            <?php if ($_SESSION['role'] === 'manager'): ?>
+                <a href="<?= $base ?>/students">Students</a>
+                <a href="<?= $base ?>/lessons">Lessons</a>
+            <?php else: ?>
+                <a href="<?= $base ?>/my-lessons">My Lessons</a>
+            <?php endif; ?>
+
+            <a href="<?= $base ?>/logout">Logout</a>
+
         <?php else: ?>
-            <a href="/my-lessons">My Lessons</a>
+            <a href="<?= $base ?>/login">Login</a>
+            <a href="<?= $base ?>/register">Register</a>
         <?php endif; ?>
-
-        <a href="/logout">Logout</a>
-
-    <?php else: ?>
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
-    <?php endif; ?>
+    </div>
 </nav>

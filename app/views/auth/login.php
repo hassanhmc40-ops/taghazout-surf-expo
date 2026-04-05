@@ -36,7 +36,7 @@
 
     </form>
 
-    <p>No account? <a href="/register">Register here</a></p>
+    <p>No account? <a href="/Surfing_schoo_challenge/register">Register here</a></p>
 </div>
 
 <?php require_once __DIR__ . '/../layout/footer.php'; ?>
