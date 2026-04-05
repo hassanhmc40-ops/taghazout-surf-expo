@@ -6,7 +6,7 @@ require_once __DIR__ . '/Database.php';
 class User {
 // 3 the private property
     private PDO $db;
-// THE CONSTRUCTOR
+// THE CONSTRUCTOR""
     public function __construct() {
         $this->db = Database::getInstance()->getConnection();
     }
