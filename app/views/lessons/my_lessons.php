@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../layout/header.php'; ?>
+<?php require_once __DIR__ . '/../layout/header.php'; ?>
 
 <div class="container">
 
@@ -45,6 +45,6 @@
 
 </div>
 
-<?php require_once __DIR__ . '/../../layout/footer.php'; ?>
+<?php require_once __DIR__ . '/../layout/footer.php'; ?>
 
 

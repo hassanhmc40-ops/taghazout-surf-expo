@@ -9,7 +9,7 @@
         </div>
     <?php endif; ?>
 
-    <form action="/login" method="POST">
+    <form action="<?= $baseUrl ?>/login" method="POST">
 
         <div class="form-group">
             <label for="email">Email</label>
@@ -36,7 +36,7 @@
 
     </form>
 
-    <p>No account? <a href="/Surfing_schoo_challenge/register">Register here</a></p>
+    <p>No account? <a href="<?= $baseUrl ?>/register">Register here</a></p>
 </div>
 
 <?php require_once __DIR__ . '/../layout/footer.php'; ?>
